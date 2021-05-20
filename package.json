@@ -3,6 +3,7 @@
   "displayName": "pdl-schema-vscode",
   "description": "PDL Schema Language Extension for Visual Studio Code",
   "version": "0.0.1",
+  "publisher": "micahstubbs",
   "engines": {
     "vscode": "^1.56.0"
   },
