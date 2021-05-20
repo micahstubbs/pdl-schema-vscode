@@ -1,0 +1,25 @@
+{
+    "name": "pdl-schema-vscode",
+    "displayName": "pdl-schema-vscode",
+    "description": "PDL Schema for Visual Studio Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pdl-schema",
+            "aliases": ["PDL Schema", "pdl-schema"],
+            "extensions": [".pdl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pdl-schema",
+            "scopeName": "source.pdl",
+            "path": "./syntaxes/pdl-schema.tmLanguage.json"
+        }]
+    }
+}
