@@ -1,9 +1,17 @@
 {
   "comments": {
+    //
+    // Comments using /* */ or // syntax are allowed but not treated as schema documentation.
+    // https://linkedin.github.io/rest.li/pdl_schema#doc-strings
+    //
     // symbol used for single line comment. Remove this entry if your language does not support line comments
     "lineComment": "//",
+    //
+    // Comments using /** */ syntax are treated as schema documentation.
+    // They will be included in the in-memory representation and the generated binding classes.
+    //
     // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
-    "blockComment": ["/*", "*/"]
+    "blockComment": ["/**", "*/"]
   },
   // symbols used as brackets
   "brackets": [
