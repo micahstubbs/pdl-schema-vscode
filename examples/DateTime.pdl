@@ -1,0 +1,5 @@
+namespace com.example.models
+
+@java.class = "org.joda.time.DateTime"
+@java.coercerClass = "com.example.time.DateTimeCoercer"
+typeref DateTime = string

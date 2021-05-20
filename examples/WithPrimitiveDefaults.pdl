@@ -1,0 +1,11 @@
+namespace com.example.models
+
+record WithPrimitiveDefaults {
+  intWithDefault: int = 1
+  longWithDefault: long = 3000000000
+  floatWithDefault: float = 3.3
+  doubleWithDefault: double = 4.4E38
+  booleanWithDefault: boolean = true
+  stringWithDefault: string = "DEFAULT"
+  bytesWithDefault: bytes = "\u0007"
+}

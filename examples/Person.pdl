@@ -1,0 +1,6 @@
+namespace com.example.models
+
+@deprecated = "Use User type instead."
+record Person {
+  firstName: string
+}

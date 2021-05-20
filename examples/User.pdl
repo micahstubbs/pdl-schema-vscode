@@ -1,9 +1,59 @@
 namespace com.example.models
+package com.example.api
 
 import com.example.time.Date
 
-record User {
+/**
+ * A record representing an user in the system.
+ */
+@hasPii = true
+record User includes AuditStamp, VersionTag {
+  /** First name of the user */
+  @`namespace` = "foo.bar"
+  @validate.regex.regex = "^[a-zA-Z]+$"
   firstName: string
+
+  @deprecated = "Use birthday instead."
+  birthYear: int
+
+  /** User's birth day */
   birthday: optional Date
+
+  // TODO: Can this be an enum?
+  @deprecated = "Use status instead."
   isActive: boolean = true
+
+  /** Status of the user. */
+  status: UserStatus = "ACTIVE"
+  suspendedReason: enum StatusReason {
+    FLAGGED_BY_SPAM_CHECK
+    REPORTED_BY_ADMIN
+  } = "FLAGGED_BY_SPAM_CHECK"
+
+  statusReasonInlineUnion: union [
+    enum ActiveReason {
+      NEVER_SUSPENDED
+      SUSPENSION_CLEARED
+    }
+    enum SuspendReason {
+      FLAGGED_BY_SPAM_CHECK
+      REPORTED_BY_ADMIN
+    }
+    enum InactiveReason {
+      USER_REQUESTED_DELETION
+      REQUESTED_BY_ADMIN
+    }
+  ] = { "com.example.models.ActiveReason": "NEVER_SUSPENDED" }
+  
+  address: {
+    namespace com.example.models.address
+
+    record Address {
+      state: string
+      zipCode: string
+    }
+  } = {
+    "state": "CA",
+    "zipCode": "12345"
+  }
 }

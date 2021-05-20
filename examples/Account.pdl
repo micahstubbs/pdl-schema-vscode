@@ -1,0 +1,10 @@
+namespace com.example.models
+
+record Account {
+  /**
+   * Owner of this account. Accounts can be owned either by a single User or an
+   * user group.
+   * By default, All your accounts are belong to CATS.
+   */
+  owner: union[User, UserGroup] = { "com.example.models.User": { "firstName": "CATS" }}
+}

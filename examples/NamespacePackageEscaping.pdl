@@ -1,0 +1,6 @@
+namespace com.example.models.`record`
+package com.example.models.`typeref`
+
+import com.example.models.`optional`
+
+record NamespacePackageEscaping { }

@@ -1,0 +1,12 @@
+namespace com.example.models
+
+/**
+ * A common record to represent audit stamps.
+ */
+record AuditStamp {
+  /** Time when this record was created */
+  createdAt: Time
+
+  /** Time when this record was last updated */
+  updatedAt: Time
+}

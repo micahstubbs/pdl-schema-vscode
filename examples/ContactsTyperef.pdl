@@ -1,0 +1,6 @@
+namespace com.example.models
+
+record ContactsTyperef {
+  primaryPhone: PhoneContact
+  secondaryPhone: PhoneContact
+}

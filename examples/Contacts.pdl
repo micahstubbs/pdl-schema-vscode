@@ -1,0 +1,20 @@
+namespace com.example.models
+
+/**
+ * A record with user's contact information.
+ */
+record Contacts {
+  /** Primary phone number for the user */
+  primaryPhoneNumber: union[
+    /** A mobile phone number */
+    mobile: PhoneNumber,
+
+    /**
+     * A work phone number
+     */
+    work: PhoneNumber,
+
+    /** A home phone number */
+    home: PhoneNumber
+  ] = {"mobile": { "number": "314-159-2653" }}
+}

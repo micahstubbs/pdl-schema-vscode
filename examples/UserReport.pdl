@@ -1,0 +1,13 @@
+namespace com.example.models
+
+record UserReport {
+  /** Users grouped by their status. Key is the string representation of status enum */
+  usersByStatus: map[string, array[User]]
+
+  /**
+   * Count of users grouped by firstName and then by status.
+   * First level key is the firstName of users.
+   * Second level key is the string representation of status.
+   */
+  countByFirstNameAndStatus: map[string, map[string, int]]
+}

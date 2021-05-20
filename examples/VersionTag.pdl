@@ -1,0 +1,6 @@
+namespace com.example.models
+
+/** A common record for specifying version tags of a record */
+record VersionTag {
+  versionTag: string
+}

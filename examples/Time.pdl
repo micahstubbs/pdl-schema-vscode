@@ -1,0 +1,4 @@
+namespace com.example.models
+
+/** Number of milliseconds since midnight, January 1, 1970 UTC. */
+typeref Time = long

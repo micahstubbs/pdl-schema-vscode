@@ -1,0 +1,6 @@
+namespace com.example.models
+
+record SuspendedUsersReport {
+  users: array[User] = [{ "firstName": "Joker" }, { "firstName": "Darth"}]
+  reasons: array[SuspendReason] = ["FLAGGED_BY_SPAM_CHECK"]
+}
