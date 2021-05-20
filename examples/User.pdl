@@ -1,0 +1,9 @@
+namespace com.example.models
+
+import com.example.time.Date
+
+record User {
+  firstName: string
+  birthday: optional Date
+  isActive: boolean = true
+}
