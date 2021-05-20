@@ -1,32 +1,34 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "PDL Schema",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.pdl-schema",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.pdl-schema",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.pdl-schema",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.pdl"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "PDL Schema",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.pdl-schema",
+          "match": "\\b(namespace|import|record|optional|includes|enum|array|int|long|float|double|boolean|string|bytes|map|union|typeref|fixed|package)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.pdl-schema",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.pdl-schema",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.pdl"
 }
